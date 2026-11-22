@@ -5,31 +5,64 @@
     "type": "image",
     "category": "nature",
     "source": "Unsplash",
-    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-    "download": "https://unsplash.com/photos/example",
+    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+    "download": "https://unsplash.com/photos/1506905925346-21bda4d32df4",
     "license": "Unsplash License",
     "tags": ["mountain", "landscape", "nature"]
   },
   {
     "id": "2",
-    "title": "Free Icon Set",
+    "title": "Free Icon Set (Lucide)",
     "type": "icons",
     "category": "ui",
     "source": "Lucide Icons",
     "url": "https://lucide.dev/",
     "download": "https://lucide.dev/",
     "license": "ISC",
-    "tags": ["icons", "ui", "svg"]
+    "tags": ["icons", "ui", "svg", "free"]
   },
   {
     "id": "3",
-    "title": "Pixel Art Character",
+    "title": "Pixel Art Assets",
     "type": "sprite",
     "category": "game",
     "source": "OpenGameArt",
     "url": "https://opengameart.org/",
     "download": "https://opengameart.org/",
-    "license": "CC0",
-    "tags": ["pixel", "character", "game"]
+    "license": "Various CC0/CC-BY",
+    "tags": ["pixel", "game", "2d"]
+  },
+  {
+    "id": "4",
+    "title": "Forest Photo",
+    "type": "image",
+    "category": "nature",
+    "source": "Unsplash",
+    "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+    "download": "https://unsplash.com/photos/1441974231531-c6227db76b6e",
+    "license": "Unsplash License",
+    "tags": ["forest", "trees", "nature"]
+  },
+  {
+    "id": "5",
+    "title": "Heroicons",
+    "type": "icons",
+    "category": "ui",
+    "source": "Heroicons",
+    "url": "https://heroicons.com/",
+    "download": "https://heroicons.com/",
+    "license": "MIT",
+    "tags": ["icons", "svg", "ui"]
+  },
+  {
+    "id": "6",
+    "title": "Free Sound Effects",
+    "type": "audio",
+    "category": "sound",
+    "source": "Freesound",
+    "url": "https://freesound.org/",
+    "download": "https://freesound.org/",
+    "license": "Various CC",
+    "tags": ["sound", "sfx", "audio"]
   }
 ]
