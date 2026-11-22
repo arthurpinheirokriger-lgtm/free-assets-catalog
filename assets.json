@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Mountain Landscape",
+    "type": "image",
+    "category": "nature",
+    "source": "Unsplash",
+    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+    "download": "https://unsplash.com/photos/example",
+    "license": "Unsplash License",
+    "tags": ["mountain", "landscape", "nature"]
+  },
+  {
+    "id": "2",
+    "title": "Free Icon Set",
+    "type": "icons",
+    "category": "ui",
+    "source": "Lucide Icons",
+    "url": "https://lucide.dev/",
+    "download": "https://lucide.dev/",
+    "license": "ISC",
+    "tags": ["icons", "ui", "svg"]
+  },
+  {
+    "id": "3",
+    "title": "Pixel Art Character",
+    "type": "sprite",
+    "category": "game",
+    "source": "OpenGameArt",
+    "url": "https://opengameart.org/",
+    "download": "https://opengameart.org/",
+    "license": "CC0",
+    "tags": ["pixel", "character", "game"]
+  }
+]
