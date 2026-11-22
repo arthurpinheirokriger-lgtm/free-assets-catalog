@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Assets Catalog</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    h1 { color: #333; }
+    .search { margin: 20px 0; }
+    .search input { padding: 10px; width: 300px; font-size: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h3 { margin: 0 0 10px; }
+    .card .meta { color: #666; font-size: 0.9em; }
+    .card a { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+    .card a:hover { background: #0056b3; }
+    .tags { margin-top: 8px; }
+    .tag { display: inline-block; background: #e9ecef; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Free Assets Catalog</h1>
+  <p>Catálogo de assets grátis. Busque e baixe.</p>
+  <div class="search">
+    <input type="text" id="search" placeholder="Buscar assets..." oninput="filterAssets()">
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    let assets = [];
+    async function loadAssets() {
+      const res = await fetch('assets.json');
+      assets = await res.json();
+      render(assets);
+    }
+    function render(list) {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = list.map(a => `
+        <div class="card">
+          <h3>${a.title}</h3>
+          <div class="meta">Tipo: ${a.type} | Categoria: ${a.category} | Fonte: ${a.source}</div>
+          <div class="meta">Licença: ${a.license}</div>
+          <div class="tags">${(a.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          <a href="${a.download || a.url}" target="_blank">Baixar / Ver</a>
+        </div>
+      `).join('');
+    }
+    function filterAssets() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const filtered = assets.filter(a => 
+        a.title.toLowerCase().includes(q) || 
+        (a.tags || []).some(t => t.toLowerCase().includes(q)) ||
+        a.category.toLowerCase().includes(q)
+      );
+      render(filtered);
+    }
+    loadAssets();
+  </script>
+</body>
+</html>
